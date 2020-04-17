@@ -1,106 +1,65 @@
+{% load static %}
 <!DOCTYPE html>
-<html style="font-size: 16px;"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="designer, web, www, deweloper, UX, UI, design, photo">
-    <meta name="description" content="my portfolio">
-    <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Portfolio.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <link rel="icon" href="images/favicon.gif">
-    
-    
-    
-    <link id="u-theme-google-font" rel="stylesheet" href="fonts.css">
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "myDesigner",
-		"url": "index.html"
-}</script>
-    <meta property="og:title" content="Portfolio">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="my portfolio">
-    <meta name="theme-color" content="#478ac9">
-    <link rel="canonical" href="index.html">
-    <meta property="og:url" content="index.html">
+<html style="font-size: 16px;">
+
+  <head>
+    {% include 'head.html' %}
+
+    <link rel="stylesheet" href="{% static 'Portfolio.css' %}" media="screen">
+
   </head>
-  <body class="u-body u-overlap"><header class="u-align-left u-black u-clearfix u-header u-sticky u-header" id="sec-f7ca"><nav class="u-menu u-menu-dropdown u-menu-open-right u-offcanvas u-offcanvas-shift u-menu-1" data-responsive-from="XL">
-        <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0;">
-          <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-grey-15 u-text-hover-palette-3-base u-text-white" href="#" style="padding: 4px 32px; font-size: calc(1em + 8px);">
-            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</symbol>
-</defs></svg>
-          </a>
-        </div>
-        <div class="u-custom-menu u-nav-container">
-          <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-15 u-text-hover-palette-3-base u-text-white" href="index.html" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-15 u-text-hover-palette-3-base u-text-white" href="Portfolio.html" style="padding: 10px 20px;">Portfolio</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-15 u-text-hover-palette-3-base u-text-white" href="Blog-posts.html" style="padding: 10px 20px;">Blog posts</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-15 u-text-hover-palette-3-base u-text-white" href="Galery.html" style="padding: 10px 20px;">Galery</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-15 u-text-hover-palette-3-base u-text-white" href="Contact.html" style="padding: 10px 20px;">Contact</a>
-</li></ul>
-        </div>
-        <div class="u-custom-menu u-nav-container-collapse">
-          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-            <div class="u-menu-close"></div>
-            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Portfolio.html" style="padding: 10px 20px;">Portfolio</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Blog-posts.html" style="padding: 10px 20px;">Blog posts</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Galery.html" style="padding: 10px 20px;">Galery</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html" style="padding: 10px 20px;">Contact</a>
-</li></ul>
-          </div>
-          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-        </div>
-      </nav><h2 class="u-heading-font u-subtitle u-text u-text-white u-text-1">
-        <a href="index.html">&nbsp; &nbsp; myDesigner</a>
-      </h2></header>
+
+  <body class="u-body u-overlap">
+    
+    {% include 'header.html' %}
+
     <section class="u-align-center u-black u-clearfix u-section-1" id="carousel_9b97">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-heading-font u-text u-title u-text-1">Projects</h1>
         <h2 class="u-align-center u-heading-font u-subtitle u-text u-text-palette-3-base u-text-2">_______________</h2>
         <div class="u-gallery u-lightbox u-show-text-on-hover u-gallery-1">
-          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle" data-href="Portfolio-detail.html">
+          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle"
+            data-href="/project">
             <div class="u-back-slide u-image u-image-1" data-image-width="1280" data-image-height="865"></div>
             <div class="u-over-slide u-shading u-over-slide-1">
               <h3 class="u-gallery-heading">Pierwszy projekt</h3>
               <p class="u-gallery-text">To jest pierwszy projekt dla xxxxxx</p>
             </div>
           </div>
-          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle" data-href="Portfolio-detail.html">
+          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle"
+            data-href="/project">
             <div class="u-back-slide u-back-slide-2" data-image-width="150" data-image-height="97"></div>
             <div class="u-over-slide u-shading u-over-slide-2">
               <h3 class="u-gallery-heading"></h3>
               <p class="u-gallery-text"></p>
             </div>
           </div>
-          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle" data-href="Portfolio-detail.html">
+          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle"
+            data-href="/project">
             <div class="u-back-slide u-back-slide-3" data-image-width="150" data-image-height="100"></div>
             <div class="u-over-slide u-shading u-over-slide-3">
               <h3 class="u-gallery-heading">TECZKA</h3>
               <p class="u-gallery-text">Co nosimy do szkoły?</p>
             </div>
           </div>
-          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle" data-href="Portfolio-detail.html">
+          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle"
+            data-href="/project">
             <div class="u-back-slide u-back-slide-4" data-image-width="150" data-image-height="100"></div>
             <div class="u-over-slide u-shading u-over-slide-4">
               <h3 class="u-gallery-heading"></h3>
               <p class="u-gallery-text"></p>
             </div>
           </div>
-          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle" data-href="Portfolio-detail.html">
+          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle"
+            data-href="/project">
             <div class="u-back-slide u-back-slide-5" data-image-width="150" data-image-height="97"></div>
             <div class="u-over-slide u-shading u-over-slide-5">
               <h3 class="u-gallery-heading"></h3>
               <p class="u-gallery-text"></p>
             </div>
           </div>
-          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle" data-href="Portfolio-detail.html">
+          <div class="u-border-14 u-border-black u-effect-over-left u-gallery-item u-shape-rectangle"
+            data-href="/project">
             <div class="u-back-slide u-back-slide-6" data-image-width="1280" data-image-height="806"></div>
             <div class="u-over-slide u-shading u-over-slide-6">
               <h3 class="u-gallery-heading"></h3>
@@ -110,84 +69,17 @@
         </div>
       </div>
     </section>
+
     <section class="u-black u-clearfix u-section-2" id="sec-1930">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <ul class="responsive-style1 u-pagination u-spacing-0 u-unstyled u-pagination-1" data-animation-name="zoomIn" data-animation-duration="1500" data-animation-delay="0" data-animation-direction="">
-          <li class="disabled prev u-nav-item u-pagination-item">
-            <a class="u-button-style u-nav-link" href="#" style="padding: 16px 28px;">〈</a>
-          </li>
-          <li class="active u-nav-item u-pagination-item">
-            <a class="u-button-style u-nav-link" href="#" style="padding: 16px 28px;">1</a>
-          </li>
-          <li class="u-nav-item u-pagination-item">
-            <a class="u-button-style u-nav-link" href="#" style="padding: 16px 28px;">2</a>
-          </li>
-          <li class="u-nav-item u-pagination-item">
-            <a class="u-button-style u-nav-link" href="#" style="padding: 16px 28px;">3</a>
-          </li>
-          <li class="u-nav-item u-pagination-item u-pagination-separator">
-            <a class="u-button-style u-nav-link" href="#" style="padding: 16px 28px;">...</a>
-          </li>
-          <li class="u-nav-item u-pagination-item">
-            <a class="u-button-style u-nav-link" href="#" style="padding: 16px 28px;">8</a>
-          </li>
-          <li class="next u-nav-item u-pagination-item">
-            <a class="u-button-style u-nav-link" href="#" style="padding: 16px 28px;">〉</a>
-          </li>
-        </ul>
-      </div>
+      {% include 'pagination-1.html' %}
     </section>
-    
-    
-    <footer class="u-align-center u-black u-clearfix u-footer u-footer" id="sec-6e36"><div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-60">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-1">
-                    <div class="u-border-1 u-border-palette-3-base u-container-layout u-valign-top u-container-layout-1">
-                      <h5 class="u-align-center u-text u-text-default u-text-1">
-                        <a href="#">EMAIL</a>
-                      </h5>
-                      <p class="u-align-center u-large-text u-text u-text-font u-text-variant u-text-2">
-                        <a href="mailto:chrusrys@gmail.com">chrusrys@gmail.com<br>
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-2">
-                    <div class="u-border-1 u-border-palette-3-base u-container-layout u-valign-top u-container-layout-2">
-                      <h5 class="u-text u-text-default u-text-3">
-                        <a href="#">A</a>DDRESS
-                      </h5>
-                      <p class="u-align-center u-large-text u-text u-text-font u-text-variant u-text-4">
-                        <a href="https://www.google.pl/maps/place/Szpak%C3%B3w+22,+41-205+Sosnowiec/@50.2949556,19.137251,17z/data=!3m1!4b1!4m5!3m4!1s0x4716da85a0416efb:0x86d9fa2b7d3b6350!8m2!3d50.2949522!4d19.139445?hl=pl" target="_blank">Szpaków 22<br>41-219 Sosnowiec, Poland
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
-                    <div class="u-border-1 u-border-palette-3-base u-container-layout u-valign-top u-container-layout-3">
-                      <h5 class="u-text u-text-default u-text-5">
-                        <a href="#">P</a>HONE
-                      </h5>
-                      <p class="u-large-text u-text u-text-default u-text-variant u-text-6">
-                        <a href="#">+48 546 552 025</a>
-                        <br>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="u-align-center u-small-text u-text u-text-variant u-text-7">myDesigner 2020</p>
-      </div></footer>
-    <span style="height: 64px; width: 64px; margin-left: 0; margin-right: auto; margin-top: 0; background-image: none; right: 20px; bottom: 20px;" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-80 u-spacing-0 u-text-palette-3-base" data-href="#">
-      <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
-      <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
-    </span>
-  
-</body></html>
+
+    {% include 'footer.html' %}
+
+    {% include 'backToTop.html' %}
+          
+    {% include 'scripts.html' %}
+
+  </body>
+
+</html>
