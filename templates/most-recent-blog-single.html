@@ -1,0 +1,55 @@
+<section class="u-align-center u-black u-clearfix u-section-5" id="sec-48b5">
+    <div class="u-clearfix u-sheet u-valign-middle-md u-sheet-1">
+        <div
+            class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gutter-0 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-1">
+                        <div class="u-container-layout u-valign-top u-container-layout-1">
+                            <h3 class="u-text u-text-1">Latest posts</h3>
+                            {% for post in most_recent %}
+                            <a href="{{ post.get_absolute_url }}">
+                                <img src="{{ post.thumbnail.url }}" alt="" class="u-image u-image-contain u-image-default u-image-1" data-image-width="1280" data-image-height="865">
+                                <p class="u-text u-text-2">{{ post.title }}</p>
+                                <p class="u-text u-text-3">views ({{ post.view_count }}) | comments ({{ post.comment_count }})</p>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-2">
+                        <div class="u-container-layout u-container-layout-2">
+                            <div class="u-border-1 u-border-grey-75 u-line u-line-horizontal u-line-1"></div>
+                            <h3 class="u-align-left u-text u-text-8">Categories</h3>
+                            {% for cat in category_count %}
+                            <p class="u-align-left u-text u-text-default u-text-9">
+                                {{ cat.categories__title }}
+                            </p>
+                            <p
+                                class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-text u-text-10">
+                                {{ cat.categories__title__count }}
+                            </p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
+                        <div class="u-container-layout u-valign-top u-container-layout-3">
+                            <h3 class="u-align-left u-text u-text-default u-text-15">History</h3>
+                            <p class="u-align-left u-text u-text-default u-text-16">April</p>
+                            <p
+                                class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-text u-text-17">
+                                11</p>
+                            <p class="u-align-left u-text u-text-default u-text-18">May</p>
+                            <p
+                                class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-text u-text-19">
+                                22</p>
+                            <p class="u-align-left u-text u-text-20">June</p>
+                            <p
+                                class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-text u-text-21">
+                                44</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

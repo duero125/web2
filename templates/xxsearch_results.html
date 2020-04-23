@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+    <head>
+
+        {% include 'head.html' %}
+
+        <link rel="stylesheet" href="{%static 'css/search_results.css' %}" media="screen">
+    
+    </head>
+    
+    <body class="u-body u-overlap">
+    
+        {% include 'header.html' %}
+
+
+        <h2>This is the results of your search</h2>
+        {% for post in queryset %}
+            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+            <br />
+        {% endfor %}        
+
+
+        {% include 'footer.html' %}
+
+        {% include 'backToTop.html' %}
+            
+        {% include 'scripts.html' %}
+    
+    </body>
+    
+</html>

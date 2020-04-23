@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+    <head>
+
+        {% include 'head.html' %}
+
+        <link rel="stylesheet" href="{%static 'css/search_results.css' %}" media="screen">
+
+    </head>
+
+    <body class="u-body u-black">
+
+        {% include 'header.html' %}
+        
+        <section class="u-align-center u-black u-clearfix u-section-1" id="sec-b5b2">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <h1 class="u-heading-font u-text u-title u-text-1">
+                    This&nbsp;is&nbsp;the&nbsp;results&nbsp;of&nbsp;your&nbsp;search</h1>
+                <h2 class="u-align-center u-heading-font u-subtitle u-text u-text-palette-3-base u-text-2">_______________
+                </h2>
+                {% for post in queryset %}
+                <a href="{{ post.get_absolute_url }}">
+                    <lu class="u-align-left u-text u-text-default u-text-3">
+                        
+                        <li>{{ post.title }}</li>
+                        
+                    </lu>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        {% include 'footer.html' %}
+
+        {% include 'backToTop.html' %}
+            
+        {% include 'scripts.html' %}
+        
+
+    </body>
+
+</html>

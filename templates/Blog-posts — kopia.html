@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+  <head>
+    {% include 'head.html' %}
+
+    <link rel="stylesheet" href="{% static 'css/Blog-posts.css' %}" media="screen">
+
+  </head>
+
+  <body class="u-body u-overlap">
+
+    {% include 'header.html' %}
+    
+    <section class="u-align-center u-black u-clearfix u-section-1" id="carousel_9b97">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-heading-font u-text u-title u-text-1">Blog posts</h1>
+        <h2 class="u-align-center u-heading-font u-subtitle u-text u-text-palette-3-base u-text-2">_______________</h2>
+      </div>
+    </section>
+
+    {% for post in queryset %}
+    <section class="u-black u-clearfix u-section-2" id="sec-b606">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-spacing-vertical u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              {% if forloop.first or forloop.last %}
+              <div
+                class="u-align-left u-blog-control u-container-style u-image u-layout-cell u-left-cell u-size-36 u-image-1"
+                style="background-image: url('{{ post.thumbnail.url }}')"
+                src="" data-image-width="1280" data-image-height="865">
+                <div class="u-container-layout u-container-layout-1"></div>
+              </div>
+              {% endif %}
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-24 u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle-sm u-valign-middle-xs u-container-layout-2">
+                  <div class="u-metadata u-text-palette-4-base u-metadata-1">
+                    <span class="u-meta-category u-meta-icon">
+                      {% for cat in post.categories.all %}
+                        <a href="#">{{ cat }}</a>
+                      {% endfor %}
+                    </span>
+                  </div>  
+                  <h2 class="u-blog-control u-text u-text-1">
+                    <a class="u-post-header-link" href="{{ post.get_absolute_url }}">
+                      {{ post.title }}
+                    </a>
+                  </h2>
+                  <div class="u-border-5 u-border-grey-75 u-line u-line-horizontal u-line-1"></div>
+                  <div class="u-blog-control u-post-content u-text u-text-2">
+                    <p>{{ post.overview|linebreaks|truncatechars:200 }}</p>
+                  </div>
+                  <div class="u-metadata u-metadata-2">
+                    <span class="img-fluid"><img src="{{ post.author.profile_picture.url }}" alt="..." class="avatar"></span>
+                    <span class="u-meta-author u-meta-icon">{{ post.author }}</span>
+                    <span class="u-meta-date u-meta-icon">{{ post.timestamp }}</span>
+                    <span class="u-meta-comments u-meta-icon">{{ post.comment_count }}</span>
+                    <span class="u-meta-edit u-meta-icon">Edit</span>
+                  </div>
+                  <a href="{{ post.get_absolute_url }}" class="u-blog-control u-link u-no-underline u-text-palette-3-base u-link-1">Read More</a>
+                </div>
+              </div>
+              {% if not forloop.first and not forloop.last %}
+              <div
+                class="u-align-left u-blog-control u-container-style u-image u-layout-cell u-left-cell u-size-36 u-image-1"
+                style="background-image: url('{{ post.thumbnail.url }}')"
+                src="" data-image-width="1280" data-image-height="865">
+                <div class="u-container-layout u-container-layout-1"></div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="u-border-1 u-border-grey-75 u-line u-line-horizontal u-line-2"></div>
+      </div>
+    </section>
+    {% endfor %}
+
+
+
+    <section class="u-black u-clearfix u-section-5" id="sec-1874">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <ul class="responsive-style1 u-pagination u-spacing-0 u-unstyled u-pagination-1" data-animation-name="zoomIn"
+          data-animation-duration="1500" data-animation-delay="0" data-animation-direction="">
+          {% if queryset.has_previous %}
+          <li class="prev u-nav-item u-pagination-item">
+            <a class="u-button-style u-nav-link" href="?{{ page_request_var }}={{ queryset.previous_page_number }}" style="padding: 16px 28px;">〈</a>
+          </li>
+          {% endif %}
+          <li class="active u-nav-item u-pagination-item" style="color:aqua">
+            <a class="u-button-style u-nav-link" href="?{{ page_request_var }}={{ queryset.number }}" style="padding: 16px 28px;">{{ queryset.number }}</a>
+          </li>
+          {% if queryset.has_next %}
+          <li class="next u-nav-item u-pagination-item">
+            <a class="u-button-style u-nav-link" href="?{{ page_request_var }}={{ queryset.next_page_number }}" style="padding: 16px 28px;">〉</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </section>
+
+
+    {% include 'footer.html' %}
+
+    {% include 'backToTop.html' %}
+        
+    {% include 'scripts.html' %}
+
+  </body>
+
+</html>

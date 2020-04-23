@@ -18,19 +18,26 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from .views import (
-    index, blog, blog2, post, projects, project, galery, contact)
+from posts.views import (
+    index, blog, search, blog2, post_create, post,
+    projects, project, galery, contact,
+    post_update, post_delete)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('blog/', blog),
+    path('blog/', blog, name='post-list'),
+    path('search/', search, name='search'),
     path('blog2/', blog2),
-    path('post/', post),
+    path('create/', post_create, name='post-create'),
+    path('post/<id>/', post, name='post-detail'),
+    path('post/<id>/update/', post_update, name='post-update'),
+    path('post/<id>/delete/', post_delete, name='post-delete'),
     path('projects/', projects),
     path('project/', project),
     path('galery/', galery),
-    path('contact/', contact)
+    path('contact/', contact),
+    path('tinymce/', include('tinymce.urls'))
 
 
 ]

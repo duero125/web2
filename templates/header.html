@@ -41,11 +41,6 @@
             </a>
           </li>
           <li class="u-nav-item">
-            <a class="u-button-style u-nav-link" href="/post"
-              style="padding: 10px 20px;">Single blog
-            </a>
-          </li>
-          <li class="u-nav-item">
             <a class="u-button-style u-nav-link" href="/galery"
               style="padding: 10px 20px;">Galery
             </a>
@@ -55,12 +50,19 @@
               style="padding: 10px 20px;">Contact
             </a>
           </li>
+          {% if request.user.is_staff %}
+          <li class="u-nav-item">
+            <a class="u-button-style u-nav-link" href="{% url 'post-create' %}"
+              style="padding: 10px 20px;">Create post
+            </a>
+          </li>
+          {% endif %}
         </ul>
       </div>
       <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
     </div>
   </nav>
   <h2 class="u-heading-font u-subtitle u-text u-text-white u-text-1">
-    <a href="index.html">&nbsp; &nbsp; myDesigner</a>
+    <a href="/">&nbsp; &nbsp; myDesigner</a>
   </h2>
 </header>
