@@ -37,9 +37,8 @@ urlpatterns = [
     path('project/', project),
     path('galery/', galery),
     path('contact/', contact),
-    path('tinymce/', include('tinymce.urls'))
-
-
+    path('tinymce/', include('tinymce.urls')),
+    path('accounts/', include('allauth.urls'))
 ]
 
 

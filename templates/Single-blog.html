@@ -113,6 +113,9 @@
         </form>
       </div>      
     </div>
+    {% else %}
+    <a href="{% url 'account_login' %}"
+            class="save u-border-radius-10 u-btn u-btn-round u-btn-submit u-button-style u-palette-3-base u-btn-1">Login to comment</a>
     {% endif %}
 
 
